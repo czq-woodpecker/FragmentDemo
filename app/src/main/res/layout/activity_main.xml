@@ -14,6 +14,7 @@
         <Button
             android:id="@+id/android_button"
             android:text="Android"
+            android:background="@drawable/button_background"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -24,6 +25,7 @@
         <Button
             android:id="@+id/java_button"
             android:text="Java"
+            android:background="@drawable/button_background"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/android_button"
@@ -33,14 +35,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/fragment_container"
+        android:orientation="vertical"
         android:layout_weight="1"
         android:layout_width="0dp"
-        android:layout_height="match_parent">
-        <fragment
-            android:id="@+id/android_fragment"
-            android:name="com.thoughtworks.fragmentdemo.AndroidFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
