@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button javaButton;
     private FragmentManager fragmentManager;
     private Fragment androidFragment;
+    private Fragment javaFragment;
     private boolean isAndroidButtonActivated;
 
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         androidFragment = new AndroidFragment();
+        javaFragment = new JavaFragment();
         fragmentManager = getSupportFragmentManager();
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             javaButton.setActivated(true);
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.remove(androidFragment);
+            fragmentTransaction.replace(R.id.fragment_container, javaFragment);
             fragmentTransaction.commit();
         }
     }
